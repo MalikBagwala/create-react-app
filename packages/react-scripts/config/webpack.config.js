@@ -45,10 +45,10 @@ const appPackageJson = require(paths.appPackageJson);
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 
 const webpackDevClientEntry = require.resolve(
-  'react-dev-utils/webpackHotDevClient'
+  '@devmalik/react-dev-utils/webpackHotDevClient'
 );
 const reactRefreshOverlayEntry = require.resolve(
-  'react-dev-utils/refreshOverlayInterop'
+  '@devmalik/react-dev-utils/refreshOverlayInterop'
 );
 
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
@@ -753,7 +753,7 @@ module.exports = function (webpackEnv) {
       new ESLintPlugin({
         // Plugin options
         extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
-        formatter: require.resolve('react-dev-utils/eslintFormatter'),
+        formatter: require.resolve('@devmalik/react-dev-utils/eslintFormatter'),
         eslintPath: require.resolve('eslint'),
         context: paths.appSrc,
         cache: true,

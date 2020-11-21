@@ -32,18 +32,18 @@ verifyTypeScriptSetup();
 // @remove-on-eject-end
 
 const fs = require('fs');
-const chalk = require('react-dev-utils/chalk');
+const chalk = require('@devmalik/react-dev-utils/chalk');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const clearConsole = require('react-dev-utils/clearConsole');
-const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
+const clearConsole = require('@devmalik/react-dev-utils/clearConsole');
+const checkRequiredFiles = require('@devmalik/react-dev-utils/checkRequiredFiles');
 const {
   choosePort,
   createCompiler,
   prepareProxy,
   prepareUrls,
-} = require('react-dev-utils/WebpackDevServerUtils');
-const openBrowser = require('react-dev-utils/openBrowser');
+} = require('@devmalik/react-dev-utils/WebpackDevServerUtils');
+const openBrowser = require('@devmalik/react-dev-utils/openBrowser');
 const semver = require('semver');
 const paths = require('../config/paths');
 const configFactory = require('../config/webpack.config');
@@ -83,7 +83,7 @@ if (process.env.HOST) {
 
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
-const { checkBrowsers } = require('react-dev-utils/browsersHelper');
+const { checkBrowsers } = require('@devmalik/react-dev-utils/browsersHelper');
 checkBrowsers(paths.appPath, isInteractive)
   .then(() => {
     // We attempt to use the default port but if it is busy, we offer the user to

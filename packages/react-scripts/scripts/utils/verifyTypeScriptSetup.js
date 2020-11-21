@@ -8,15 +8,15 @@
 
 'use strict';
 
-const chalk = require('react-dev-utils/chalk');
+const chalk = require('@devmalik/react-dev-utils/chalk');
 const fs = require('fs');
 const resolve = require('resolve');
 const path = require('path');
 const paths = require('../../config/paths');
 const os = require('os');
 const semver = require('semver');
-const immer = require('react-dev-utils/immer').produce;
-const globby = require('react-dev-utils/globby').sync;
+const immer = require('@devmalik/react-dev-utils/immer').produce;
+const globby = require('@devmalik/react-dev-utils/globby').sync;
 
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
@@ -221,7 +221,9 @@ function verifyTypeScriptSetup() {
   } else {
     // This is bug fix code of https://github.com/facebook/create-react-app/issues/9868
     // Bellow code release variable from non-extensible and freeze status.
-    appTsConfig.compilerOptions = JSON.parse(JSON.stringify(appTsConfig.compilerOptions));
+    appTsConfig.compilerOptions = JSON.parse(
+      JSON.stringify(appTsConfig.compilerOptions)
+    );
 
     // Original appTsConfig.compilerOptions status
     // Object.isExtensible(appTsConfig.compilerOptions) output: false

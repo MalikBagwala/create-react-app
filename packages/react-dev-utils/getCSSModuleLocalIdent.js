@@ -10,7 +10,12 @@
 const loaderUtils = require('loader-utils');
 const path = require('path');
 
-module.exports = function getLocalIdent(context, localName, options) {
+module.exports = function getLocalIdent(
+  context,
+  localIdentName,
+  localName,
+  options
+) {
   // Create a hash based on a the file location and class name. Will be unique across a project, and close to globally unique.
   const hash = loaderUtils.getHashDigest(
     path.posix.relative(context.rootContext, context.resourcePath) + localName,

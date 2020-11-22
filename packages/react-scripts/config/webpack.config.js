@@ -127,7 +127,6 @@ module.exports = function (webpackEnv) {
         options: {
           // Necessary for external CSS imports to work
           // https://github.com/facebook/create-react-app/issues/2677
-          ident: 'postcss',
           postcssOptions: {
             plugins: () => [
               require('tailwindcss'),
@@ -136,7 +135,6 @@ module.exports = function (webpackEnv) {
                 autoprefixer: {
                   flexbox: 'no-2009',
                 },
-
                 stage: 3,
               }),
               // Adds PostCSS Normalize as the reset css with default options,

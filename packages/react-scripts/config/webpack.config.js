@@ -527,7 +527,7 @@ module.exports = function (webpackEnv) {
             {
               test: cssModuleRegex,
               use: getStyleLoaders({
-                importLoaders: 1,
+                importLoaders: 2,
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
